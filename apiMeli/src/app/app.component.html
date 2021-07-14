@@ -1,18 +1,39 @@
-<h1>API MERCADO LIBRE</h1>
+<div class="navbar navbar-light navColor mb-2">
+  <div class="row">
+    <div class="col-2">
+      <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.15.0/mercadolibre/logo__small.png" class="mt-1" alt=""> 
+    </div>
+    <div class="col-8">
+      <input type="text" [(ngModel)]="entrada" class="form-control nav-search-input" />
+    </div>
+    <div class="col-2">
+      <button (click)="search()" class="btn">🔍</button>
+    </div>
+  </div>
 
-
-
-<div >
-
-
-<h3>
-  {{product.id}}
-</h3>
 
 
 
 </div>
 
+
+
+
+<div>
+
+  <div *ngFor="let uno of products.results">
+    <h5>
+     ID: {{uno.id}}
+      <br>
+     NOMBRE: {{uno.name}}
+
+    </h5>
+
+    <img src="{{uno.pictures[0].url}}" alt="" height="200px">
+    <hr>
+
+  </div>
+</div>
 
 
 <router-outlet></router-outlet>

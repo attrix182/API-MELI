@@ -10,13 +10,34 @@ export class AppComponent {
   title = 'apiMeli';
   products: any = '';
   product: any = '';
+  entrada: any = '';
+  url: any = 'https://api.mercadolibre.com/products/search?status=active&site_id=MLA&q=';
+  target: any;
 
 
   constructor(private http: HttpClient) {
 
+
+
+  }
+
+  search() {
     this.listData()
+  }
 
 
+  async getProducts() {
+    return new Promise((resolve, reject) => {
+      this.target = this.url + this.entrada
+
+      this.target.replace(/ /g, '%20')
+
+      console.log(this.target)
+
+      this.http.get<any>(this.target.toString()).subscribe(data => {
+        resolve(data)
+      })
+    })
   }
 
   async listData() {
@@ -25,14 +46,6 @@ export class AppComponent {
     console.log(this.products)
   }
 
-
-  async getProducts() {
-    return new Promise((resolve, reject) => {
-      this.http.get<any>('https://api.mercadolibre.com/products/search?status=active&site_id=MLA&q=Samsung%20Galaxy%20S8').subscribe(data => {
-        resolve(data)
-      })
-    })
-  }
 
 
 }
