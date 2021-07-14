@@ -4,7 +4,7 @@ MELI: MercadoLibre
 
 Consumiendo la api de Mercadolibre: https://developers.mercadolibre.com.ar/es_ar/buscador-de-productos
 
-<img src="https://user-images.githubusercontent.com/44885834/125558954-ba1fe2e8-b5d5-4133-82e6-f5888718a6c6.png" height="650px"/>
+<img src="https://user-images.githubusercontent.com/44885834/125558954-ba1fe2e8-b5d5-4133-82e6-f5888718a6c6.png" height="660px"/>
 
 <img src="https://user-images.githubusercontent.com/44885834/125660833-37000aa1-00a4-47ff-9e8f-72b63919ec31.png" height="600px"/>
 
