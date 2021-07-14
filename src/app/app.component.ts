@@ -22,7 +22,9 @@ export class AppComponent {
   }
 
   search() {
+    setTimeout (() => {
     this.listData()
+  })
   }
 
 

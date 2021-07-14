@@ -1,37 +1,41 @@
-<div class="navbar navbar-light navColor mb-2">
-  <div class="row">
-    <div class="col-2">
-      <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.15.0/mercadolibre/logo__small.png" class="mt-1" alt=""> 
-    </div>
-    <div class="col-8">
-      <input type="text" [(ngModel)]="entrada" class="form-control nav-search-input" />
-    </div>
-    <div class="col-2">
-      <button (click)="search()" class="btn">🔍</button>
-    </div>
+<div class="navbar navbar-light navColor  nav-search">
+
+  <div class="navbar-brand">
+    <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.15.0/mercadolibre/logo__small.png" class="mt-1"
+      alt="">
   </div>
 
-
-
+  <div class="col">
+    <input type="text" (ngModelChange)="search()" [(ngModel)]="entrada" class="nav-search-input"
+      aria-label="Ingresá lo que quieras encontrar" name="as_word" placeholder="Buscar productos, marcas y más…"
+      maxlength="120" autofocus="" spellcheck="false" tabindex="2">
+  </div>
 
 </div>
 
-
+<div class="container-fluid cont mb-2" *ngIf="entrada">
+  <br>
+  <h5> {{entrada}} </h5>
+  <br>
+</div>
 
 
 <div>
 
   <div *ngFor="let uno of products.results">
-    <h5>
-     ID: {{uno.id}}
-      <br>
-     NOMBRE: {{uno.name}}
+    <div class="container text-align-left">
+      <div class="row">
+        <div class="col">
+          <img src="{{uno.pictures[0].url}}" alt="" height="90px">
+        </div>
 
-    </h5>
+        <div class="col">
+          <b>{{uno.name}}</b>
+        </div>
 
-    <img src="{{uno.pictures[0].url}}" alt="" height="200px">
+      </div>
+    </div>
     <hr>
-
   </div>
 </div>
 
