@@ -1,27 +1,24 @@
-# ApiMeli
+# API MELI
+MELI: MercadoLibre
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+## Descripcion
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Consumiendo la api de Mercadolibre: https://developers.mercadolibre.com.ar/es_ar/buscador-de-productos
 
-## Code scaffolding
+El proyecto consiste en cosumir la API de mercadolibre, listando productos por un campo de busqueda determinado por el usuario
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Server de desarrollo
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Ejecutar `npm i` para instalar las dependecias
 
-## Running unit tests
+Ejecutar `ng serve`para server de desarrollo. Navegar a `http://localhost:4200/` para ver la web
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Capturas
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
+<img src="https://user-images.githubusercontent.com/44885834/125558954-ba1fe2e8-b5d5-4133-82e6-f5888718a6c6.png" height="665px"/>
 
-## Further help
+<img src="https://user-images.githubusercontent.com/44885834/125660833-37000aa1-00a4-47ff-9e8f-72b63919ec31.png" height="600px"/>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
