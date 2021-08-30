@@ -30,6 +30,7 @@ export class AppComponent {
 
   async getProducts() {
     return new Promise((resolve, reject) => {
+
       this.target = this.url + this.entrada
 
       this.target.replace(/ /g, '%20')
@@ -39,12 +40,16 @@ export class AppComponent {
       this.http.get<any>(this.target.toString()).subscribe(data => {
         resolve(data)
       })
+
+      
     })
   }
 
+
+
   async listData() {
     this.products = await this.getProducts()
-    this.product = this.products.results[0]
+   // this.product = this.products.results[0]
     console.log(this.products)
   }
 
